@@ -19,11 +19,7 @@
     </div>
     <div class="partition"></div>
     <panel :ti="motto"/>
-    <div class="card-te">
-      <div class="card-content" v-for="i in 7" :key="i">
-        <card></card>
-      </div>
-    </div>
+    <card :goods="goods"/>
   </div>
 </template>
 
@@ -43,7 +39,42 @@ export default {
   data () {
     return {
       motto: '精选案例',
-      // userInfo: {}
+      goods: [{
+        id: 1,
+        coverImg: 'https://img-oss.yunshanmeicai.com/goods/default/31d8dfa4-0d7b-4694-80f9-41b07c9d0a3a.png',
+        title: '五室两厅建安费发',
+        desc: 120
+      }, {
+        id: 2,
+        coverImg: 'https://img-oss.yunshanmeicai.com/goods/default/31d8dfa4-0d7b-4694-80f9-41b07c9d0a3a.png',
+        title: '五室两厅建安费发',
+        desc: 120
+      }, {
+        id: 3,
+        coverImg: 'https://img-oss.yunshanmeicai.com/goods/default/31d8dfa4-0d7b-4694-80f9-41b07c9d0a3a.png',
+        title: '五室两厅建安费发',
+        desc: 120
+      }, {
+        id: 4,
+        coverImg: 'https://img-oss.yunshanmeicai.com/goods/default/31d8dfa4-0d7b-4694-80f9-41b07c9d0a3a.png',
+        title: '五室两厅建安费发',
+        desc: 120
+      }, {
+        id: 5,
+        coverImg: 'https://img-oss.yunshanmeicai.com/goods/default/31d8dfa4-0d7b-4694-80f9-41b07c9d0a3a.png',
+        title: '五室两厅建安费发',
+        desc: 120
+      }, {
+        id: 6,
+        coverImg: 'https://img-oss.yunshanmeicai.com/goods/default/31d8dfa4-0d7b-4694-80f9-41b07c9d0a3a.png',
+        title: '五室两厅建安费发',
+        desc: 120
+      }, {
+        id: 7,
+        coverImg: 'https://img-oss.yunshanmeicai.com/goods/default/31d8dfa4-0d7b-4694-80f9-41b07c9d0a3a.png',
+        title: '五室两厅建安费发',
+        desc: 120
+      }],
       images: [
         {
           url:
@@ -132,13 +163,6 @@ export default {
     .nav_text {
       font-size: 26rpx;
       text-align: center;
-    }
-    .card-te{
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .card-content {
-      width: 50%;
     }
   }
 </style>

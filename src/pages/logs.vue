@@ -1,15 +1,17 @@
 <template>
   <div>
-    <i-card full title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-      <view slot="content">内容不错</view>
-      <view slot="footer">尾部内容</view>
-    </i-card>
-    <i-button type="success">按钮</i-button>
+    <div v-for="i in 7" :key="i">
+      <i-card thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+        <view slot="content">内容不错</view>
+        <view slot="footer">尾部内容</view>
+      </i-card>
+    </div>
+   <!-- <i-button type="success">按钮</i-button>
     <ul class="container log-list">
       <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
         <card :text="(index + 1) + ' . ' + log"></card>
       </li>
-    </ul>
+    </ul>-->
   </div>
 </template>
 
@@ -43,14 +45,8 @@ export default {
 }
 </script>
 
-<style>
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
-}
-
-.log-item {
-  margin: 10rpx;
-}
+<style scoped>
+  i-card {
+    width: 255rpx;
+  }
 </style>
