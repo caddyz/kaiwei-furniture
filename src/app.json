@@ -24,8 +24,8 @@
     }, {
       "text": "订单",
       "pagePath": "pages/logs",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
+      "iconPath": "static/tabs/nickname.png",
+      "selectedIconPath": "static/tabs/nickname-active.png"
     }],
     "position": "bottom"
   }
