@@ -8,18 +8,20 @@
     </div>
     <swiper :images="images" />
     <div class="nav_list">
-      <div >
-        <img src="/static/tabs/bank.png" class="nav_icon"/>
+      <div data-index="1" @click="indexRouter(e)">
+        <img src="/static/img/bank.png" class="nav_icon"/>
         <div class="nav_text">报价</div>
       </div>
-      <div >
-        <img src="/static/tabs/bookmark.png" class="nav_icon"/>
+      <div data-index="2" @click="indexRouter(e)">
+        <img src="/static/img/bookmark.png" class="nav_icon"/>
         <div class="nav_text">案例</div>
       </div>
     </div>
     <div class="partition"></div>
-    <panel :ti="motto"/>
-    <card :goods="goods"/>
+    <div class="index_content">
+      <panel :ti="motto"/>
+      <card :goods="goods"/>
+    </div>
   </div>
 </template>
 
@@ -98,6 +100,19 @@ export default {
     skipSearch () {
       const url = '/pages/counter'
       this.$router.push(url)
+    },
+    indexRouter (e) {
+      console.log('1223')
+      console.log('获取到的id：', e.currentTarget.dataset.index)
+      // const index = parseInt(e.target.dataset.id)
+      // switch (index) {
+      //   case 1 :
+      //     console.log('hh')
+      //     break
+      //   case 2 :
+      //     console.log('222')
+      //     break
+      // }
     }
     // getUserInfo () {
     //   // 调用登录接口
@@ -164,5 +179,9 @@ export default {
       font-size: 26rpx;
       text-align: center;
     }
+  }
+  .index_content {
+    width: 90%;
+    margin: 0 auto;
   }
 </style>

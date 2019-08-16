@@ -1,6 +1,6 @@
 <template>
   <div class="pr">
-    <div class="item" v-for="(item,index) in goods" :key="index" :data-id="item.id" @click="skip(item)">
+    <div class="item" v-for="(item,index) in goods" :key="index" @click="skip(item)">
       <div class="item_content">
         <div class="img_wrap">
           <img :src="item.coverImg"/>
